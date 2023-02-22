@@ -1,12 +1,13 @@
 
-import './App.css';
-import Slider from './sample/Slider';
+// import Admin from './Admin/Admin';
+
+
 
 function App() {
   return (
-    <div className="App">
-
-        <Slider/>
+    <div>
+      {/* <Admin/> */}
+  
     </div>
   );
 }
