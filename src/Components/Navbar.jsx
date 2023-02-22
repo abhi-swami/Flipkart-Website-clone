@@ -32,7 +32,7 @@ const Navbar = () => {
         <SearchBox />
       </Box>
 
-      <Button w="11%" colorScheme="white" fontWeight={'500'}
+      <Button w="11%" colorscheme="white" fontWeight={'500'}
       color="#2974f2"
       bg="white" mr={10} h="72%" borderRadius={1}>
         Login

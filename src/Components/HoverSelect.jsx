@@ -20,7 +20,7 @@ const HoverSelect = ({ options }) => {
         onMouseLeave={() => setIsOpen(false)} color="white" bg="#2974f2" border="none" boxShadow="none" w='100px' as={Button} rightIcon={<ChevronDownIcon />}>
     More
   </MenuButton>
-  <MenuList color='black' colorScheme='white' bg='white' marginTop={2} zIndex="1000"
+  <MenuList color='black' colorscheme='white' bg='white' marginTop={2} zIndex="1000"
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}>
      {options.map((option) => (
