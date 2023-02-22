@@ -1,21 +1,14 @@
-
-
-import './App.css';
-import Home from './Pages/Home/Home.jsx'
+import "./App.css";
+import Home from "./Pages/Home/Home.jsx";
 // import Slider from './sample/Slider';
-import Navbar from './Components/Navbar'
+import Navbar from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-<Navbar/>
-<Home/>
-   
+      <Navbar />
+      <Home />
     </div>
   );
-
-
-
-
 }
 
 export default App;
