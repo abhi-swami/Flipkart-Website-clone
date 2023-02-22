@@ -1,15 +1,7 @@
-
 // import Admin from './Admin/Admin';
 
-
-
 function App() {
-  return (
-    <div>
-      {/* <Admin/> */}
-  
-    </div>
-  );
+  return <div>{/* <Admin/> */}</div>;
 }
 
 export default App;
