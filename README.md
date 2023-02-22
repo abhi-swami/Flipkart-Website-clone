@@ -1,3 +1,6 @@
+# civil-kettle-7397
+
+
 # Getting Started with  App
 
 
@@ -21,10 +24,6 @@
 
 ## I request you all to please do not use Link tag provided by Chakra rather use Link tag provided by react router dom.
 
-
-# civil-kettle-7397
-
-## I am making Product Page & Detailed Info of product page.
 
 ## Contributors :-
 
