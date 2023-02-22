@@ -8,7 +8,7 @@ const handleSearch=()=>{
 }
   return (
     <InputGroup h="100%" >
-      <Input paddingLeft={1} h='100%' onChange={(e)=>setSearchext(e.target.value)} type="text" colorScheme="white"
+      <Input paddingLeft={1} h='100%' onChange={(e)=>setSearchext(e.target.value)} type="text" colorscheme="white"
       color="#797979"
       bg="white" borderRadius={"1px"}  
       placeholder='Search for products,brands and more' w="100%"/>
