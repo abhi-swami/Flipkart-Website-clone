@@ -22,15 +22,19 @@
 ## I request you all to please do not use Link tag provided by Chakra rather use Link tag provided by react router dom.
 
 
+# civil-kettle-7397
+
+## I am making Product Page & Detailed Info of product page.
 
 ## Contributors :-
 
 
 - [x] fp06_152 - Abhishek Swami - [GitHub Profile](https://github.com/abhi-swami) / [LinkedIn]()
-- [x] fw20_0366 - Sristy Verma - [GitHub Profile]() / [LinkedIn]()
+- [x] fw20_0366 - Sristy Verma - [GitHub Profile](https://github.com/SristyVerma) / [LinkedIn]()
 - [x] fw20_0525 - Sumit Kumar - [GitHub Profile](https://github.com/sumitkprasad123) / [LinkedIn]()
 - [x] fw19_0691 - Rajat Agrawal - [GitHub Profile](https://github.com/agrawalrajat310) / [LinkedIn](https://www.linkedin.com/in/rajatagrawal310/)
 - [x] fw20_0015 - Vinay Digarse - [GitHub Profile]() / [LinkedIn]()
+
 
 
 

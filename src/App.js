@@ -1,4 +1,5 @@
 
+
 import './App.css';
 import Home from './Pages/Home/Home.jsx'
 // import Slider from './sample/Slider';
@@ -8,9 +9,13 @@ function App() {
     <div className="App">
 <Navbar/>
 <Home/>
-        {/* <Slider/> */}
+   
     </div>
   );
+
+
+
+
 }
 
 export default App;
