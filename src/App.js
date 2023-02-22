@@ -1,7 +1,8 @@
-// import Admin from './Admin/Admin';
+
+import "./App.css";
 
 function App() {
-  return <div>{/* <Admin/> */}</div>;
+  return <div className="App"></div>;
 }
 
 export default App;
