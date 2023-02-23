@@ -8,9 +8,13 @@ import {
   useToast,
   Text,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CheckCircleIcon, WarningIcon } from "@chakra-ui/icons";
 
+import { getProduct, patchProduct } from "../../Utils/apiFunction";
+import { base_url } from "../../Utils/url";
+
+const url = `${base_url}/allproducts/145`;
 
 const intitialData = {
   name: "",
@@ -23,10 +27,9 @@ const intitialData = {
   query_url: "",
 };
 
-const AddProducts = () => {
+const EditProduct = () => {
   const [data, setData] = useState(intitialData);
-  const imgref = useRef();
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const toast = useToast();
   const {
     name,
@@ -37,6 +40,7 @@ const AddProducts = () => {
     rating_count,
     thumbnail,
   } = data;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     const val =
@@ -47,23 +51,6 @@ const AddProducts = () => {
         ? Number(value)
         : value;
     setData({ ...data, [name]: val });
-  };
-
-  const handleImage = async () => {
-    setLoading(true);
-    let form = new FormData();
-    form.append("image", imgref.current.files[0]);
-    let res = await fetch(
-      "https://api.imgbb.com/1/upload?expiration=600&key=0dc66cccd3a39544a0bdbcace49e0027",
-      {
-        method: "POST",
-        body: form,
-      }
-    );
-    let acc_res = await res.json();
-    const imageurl = acc_res.data.display_url;
-    setData({ ...data, thumbnail: imageurl });
-    setLoading(false);
   };
 
   const handleSubmit = async (e) => {
@@ -79,43 +66,41 @@ const AddProducts = () => {
     ) {
       toast({
         position: "top-left",
-
         render: () => (
-          <Flex color="white" border="4px solid white" p={"10px"} bgColor="red">
+          <Flex color="red" border="4px solid white" p={"10px"} bgColor="red">
             <WarningIcon w={30} h={30} />
             <Text size="lg" ml="15px">
-              Add Product Image
+              Please Add All Details
             </Text>
           </Flex>
         ),
       });
       return;
     }
-    toast({
-      position: "top-left",
-      render: () => (
-        <Flex
-          color="white"
-          border="4px solid white"
-          p={"10px"}
-          bgColor="green.400"
-        >
-          <CheckCircleIcon w={30} h={30} />
-          <Text size="lg" ml="15px">
-            Product has been added!!{" "}
-          </Text>
-        </Flex>
-      ),
-    });
-    await fetch("http://localhost:8080/testing", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then(setData(intitialData));
-    // navigate("/")
+    patchProduct(url, data)
+      .then(() =>
+        toast({
+          position: "bottom",
+          render: () => (
+            <Flex
+              color="white"
+              border="4px solid white"
+              p={"10px"}
+              bgColor="green.400"
+            >
+              <CheckCircleIcon w={30} h={30} />
+              <Text size="lg" ml="15px">
+                Product has been updated!!{" "}
+              </Text>
+            </Flex>
+          ),
+        })
+      ).then(setData(intitialData))
+
   };
+  useEffect(() => {
+    getProduct(url).then((res) => setData(res));
+  }, []);
 
   return (
     <Box mt={8}>
@@ -137,19 +122,16 @@ const AddProducts = () => {
             onChange={handleChange}
             name="brand"
           />
-          {/* <FormLabel mt={4}>Brand Name</FormLabel>
+          <FormLabel mt={4}>Image URL</FormLabel>
           <Input
-            type="text"
+            type="url"
             placeholder="Enter Image Url"
-            value={img}
+            value={thumbnail}
             onChange={handleChange}
-            name = "img"
-          /> */}
+            name="thumbnail"
+          />
 
-          <FormLabel mt={4}>Product Image</FormLabel>
-          <Input type="file" onChange={handleImage} ref={imgref} />
-
-          <FormLabel mt={4}>Product Price (Rs.)</FormLabel>
+          <FormLabel mt={4}>Current Price (Rs.)</FormLabel>
           <Input
             type="number"
             placeholder="Enter Product Price"
@@ -158,7 +140,7 @@ const AddProducts = () => {
             onChange={handleChange}
           />
 
-          <FormLabel mt={4}>Product MRP</FormLabel>
+          <FormLabel mt={4}>Original Price</FormLabel>
           <Input
             type="number"
             placeholder="Enter Product MRP"
@@ -175,7 +157,7 @@ const AddProducts = () => {
             onChange={handleChange}
             name="rating"
           />
-          <FormLabel mt={4}>User Ratings</FormLabel>
+          <FormLabel mt={4}>Rating Counts</FormLabel>
           <Input
             type="number"
             placeholder="Enter User Ratings"
@@ -191,7 +173,7 @@ const AddProducts = () => {
             type="submit"
             isLoading={loading}
           >
-            Add New Product
+            UPDATE IT!
           </Button>
         </FormControl>
       </form>
@@ -199,4 +181,4 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
+export default EditProduct;
