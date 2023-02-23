@@ -1,16 +1,36 @@
-import { Image,Flex, Icon, Text, Button, Box } from "@chakra-ui/react";
+import { Image,Flex, Icon, Text, Button, Box, useDisclosure, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Link ,useNavigate} from "react-router-dom"
+
+import { FaUserCircle } from "react-icons/fa";
+// import {useState} from 'react'
 import HoverSelect from "./HoverSelect";
 import logo from '../Images/click_cart.png'
 import { FaShoppingCart } from "react-icons/fa";
 
 import SearchBox from "./SearchInput";
+import LoginModal from "./LoginModal/LoginModal";
+import { useUserAuth } from "../Context/UserAuthContext";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 const Navbar = () => {
+  const navigate=useNavigate()
+  const {user,logOut,login}=useUserAuth()
+  const handleLogOut=async ()=>{
+    try{
+await logOut()
+navigate("/login")
+    }
+    catch(err){
+      console.log(err.message)
+    }
+  }
+  // console.log(typeof(user.email))
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
       h="55px"
      marginBottom="0px"
-      paddingRight="10%"
-      paddingLeft="10%"
+      // paddingRight="10%"
+      // paddingLeft="10%"
       paddingTop="0.5rem"
       paddingBottom="0.5rem"
       as="nav"
@@ -21,10 +41,11 @@ const Navbar = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
+       <Text  fontSize={{ base: "sm", md: "md" }} fontWeight="bold">
+          Click-Cart
+        </Text> 
       <Box mr={4} h="100%" cursor='pointer' >
-        {/* <Text  fontSize={{ base: "sm", md: "md" }} fontWeight="bold">
-          Flipkart
-        </Text> */}
+        
         <Image src={logo} alt="placeholder image" h="100%"/>
       </Box>
       <Box   alignItems={"center"}
@@ -32,7 +53,7 @@ const Navbar = () => {
         <SearchBox />
       </Box>
 
-      <Button w="11%" colorscheme="white" fontWeight={'500'}
+      <Button onClick={onOpen} w="11%" colorscheme="white" fontWeight={'500'}
       color="#2974f2"
       bg="white" mr={10} h="72%" borderRadius={1}>
         Login
@@ -53,15 +74,35 @@ const Navbar = () => {
    
     
       <Box  ml='15px' cursor={'pointer'}>
-          <Flex align="center">
+          <Flex   mr={4} justifyContent={'center'} alignItems={'center'}>
+            <Link to={"/cart"}>
+           
+            <Text  fontWeight="600" fontSize={{ base: "sm", md: "md" }} ml={1} mr={2}  alignItems='center' justifyContent='center'>
             <Icon as={FaShoppingCart} w={4} h={4} ml={0}/>
-            <Text fontWeight="600" fontSize={{ base: "sm", md: "md" }} ml={1}>
               Cart
             </Text>
+            </Link>
           </Flex>
         </Box>
-     
+        {/* <Box mr={4} h="100%" cursor='pointer' >
+         <Text  fontSize={{ base: "sm", md: "md" }} fontWeight="bold">
+          {user&&user.email.substring(0, user.email.indexOf("@"))}
+        </Text>  */}
+        
+      {/* </Box> */}
+      {(login&&user) && (
+      <Menu>
+  <MenuButton  rightIcon={<ChevronDownIcon />} bg="transparent" variant="outline" shadow={'none'} _hover={'none'} _focus={'none'}>
+  <Icon as={FaUserCircle} w={4} h={4} />
+  </MenuButton>
+  <MenuList color='black' colorscheme='white' bg='white' marginTop={2} zIndex="1000">
+    <MenuItem> {user&&user.email.substring(0, user.email.indexOf("@"))}</MenuItem>
+    <MenuItem onClick={handleLogOut}>LogOut</MenuItem>
+  </MenuList>
+</Menu>)}
+        <LoginModal isOpen={isOpen} onOpen={onOpen} onClose={onClose}/>
     </Flex>
+ 
   );
 };
 

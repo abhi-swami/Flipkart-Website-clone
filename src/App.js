@@ -6,15 +6,20 @@ import Admin from './Pages/Admin/Admin'
 
 
 import Navbar from "./Components/Navbar";
+import MainRoutes from "./Routes/MainRoutes";
+import { UserAuthContextProvider } from "./Context/UserAuthContext";
 
 function App() {
   return (
     <div className="App">
+      <UserAuthContextProvider>
+      <MainRoutes/>
       <Navbar/>
+      
       <Home/>
       <Footer/>
       <Admin/>
-   
+      </UserAuthContextProvider>
     </div>
   );
 
