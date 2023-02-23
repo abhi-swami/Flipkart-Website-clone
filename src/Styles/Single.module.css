@@ -1,0 +1,19 @@
+/* single product page */
+.main_flex {
+  border: 2px solid red;
+}
+@media (max-width: 907px) {
+  .main_flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 736px) {
+  .inner_flex {
+    flex-direction: column;
+    width: 150%;
+  }
+  .Button_flex {
+    flex-direction: column;
+    width: 150%;
+  }
+}
