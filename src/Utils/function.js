@@ -1,5 +1,9 @@
+
+import { AiFillStar } from "react-icons/ai";
+
 export const productListGenerator = (data) => {
     let obj = {};
+    let arr=[]
     if (data) {
       const x = data.map((el) => el.brand);
       for (let i = 0; i < x.length; i++) {
@@ -7,7 +11,10 @@ export const productListGenerator = (data) => {
           obj[x[i]] = x[i];
         }
       }
-      return obj;
+      for(let i in obj){
+        arr.push(i)
+      }
+      return arr;
     }
   };
 
@@ -43,5 +50,52 @@ export const productListGenerator = (data) => {
         str2=str2+x[i]
       }
       return`${str2},${str1}`
+    }
+  }
+
+
+  export function starGenderator(val){
+    if(val===1){
+      return(
+        <AiFillStar color="rgb(56,142,60)"/>
+      )
+    }
+    if(val===2){
+      return(
+        <>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        </>
+      )
+    }
+    if(val===3){
+      return(
+        <>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        </>
+      )
+    }
+    if(val===4){
+      return(
+        <>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        </>
+      )
+    }
+    if(val===5){
+      return(
+        <>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar color="rgb(56,142,60)"/>
+        </>
+      )
     }
   }
