@@ -92,7 +92,7 @@ navigate("/login")
       {/* </Box> */}
       {(login&&user) && (
       <Menu>
-  <MenuButton  rightIcon={<ChevronDownIcon />} bg="transparent" variant="outline" shadow={'none'} _hover={'none'} _focus={'none'}>
+  <MenuButton  righticon={<ChevronDownIcon />} bg="transparent" variant="outline" shadow={'none'} _hover={'none'} _focus={'none'}>
   <Icon as={FaUserCircle} w={4} h={4} />
   </MenuButton>
   <MenuList color='black' colorscheme='white' bg='white' marginTop={2} zIndex="1000">

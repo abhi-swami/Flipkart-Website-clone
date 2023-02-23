@@ -8,10 +8,25 @@ import {
   Image,
   useToast,
   Tooltip,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  Heading,
+  ModalCloseButton,
+  ModalBody,
+  HStack,
+  PinInput,
+  PinInputField,
+  ModalFooter,
+  Button,
 } from "@chakra-ui/react";
 import { AiFillEdit, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { convertor } from "../../Utils/function";
+import { Link } from "react-router-dom";
+import EditProduct from "./EditProduct";
 
 
 const ProductItem = ({
@@ -29,6 +44,11 @@ const ProductItem = ({
 
 
   const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const editProduct=(id)=>{
+    console.log(id)
+    onOpen()
+  }
 
 
 
@@ -58,12 +78,10 @@ const ProductItem = ({
       )
       .then(() => getData());
   };
-  const editProduct=()=>{
-    
-  }
+  
 
   return (
-    <div>
+    <Box border={'0px solid red'} width={'100%'}>
       <Flex
         w="100%"
         justify="space-between"
@@ -147,14 +165,32 @@ const ProductItem = ({
               alignItems="center"
               w="30px"
               p={["1", "1", "2"]}
-              onClick={()=>editProduct()}
+              onClick={()=>editProduct(id)}
             >
               <AiFillEdit />
             </Circle>
           </Tooltip>
+            <Modal isOpen={isOpen} onClose={onClose} >
+                <ModalOverlay />
+                <ModalContent w={'70%'}>
+                  <ModalHeader>
+                    <Heading size={"sm"}>Enter The Details Here</Heading>
+                  </ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <HStack my={1}></HStack>
+                    <HStack justifyContent={"center"} alignItems={"center"}>
+                      <EditProduct id={id}/>
+                    </HStack>
+                  </ModalBody>
+
+                  <ModalFooter justifyContent={"center"} alignItems={"center"}>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
         </Box>
       </Flex>
-    </div>
+    </Box>
   );
 };
 

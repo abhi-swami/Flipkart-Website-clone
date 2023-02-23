@@ -13,12 +13,10 @@ function App() {
   return (
     <div className="App">
       <UserAuthContextProvider>
-      <MainRoutes/>
       <Navbar/>
-      
-      <Home/>
+      <MainRoutes/>
       <Footer/>
-      <Admin/>
+      {/* <Admin/> */}
       </UserAuthContextProvider>
     </div>
   );
