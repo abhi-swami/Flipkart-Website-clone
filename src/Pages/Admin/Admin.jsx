@@ -10,6 +10,7 @@ import {
 import React, { useEffect, useState } from "react";
 import AddProducts from "../../Components/Admin/AddProducts";
 import ProductsList from "../../Components/Admin/ProductsList";
+import EditProduct from "../../Components/Admin/EditProduct";
 import { base_url } from "../../Utils/url";
 
 const url=`${base_url}/allproducts`
@@ -29,6 +30,7 @@ const Admin = () => {
           <Tab>Home</Tab>
           <Tab>Add Product</Tab>
           <Tab>Products</Tab>
+          <Tab>Edit Product</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -101,6 +103,12 @@ const Admin = () => {
               All Products List
             </Heading>
             <ProductsList />
+          </TabPanel>
+          <TabPanel>
+            <Heading size={"lg"} textAlign={"left"} mt={4}>
+              All Products List
+            </Heading>
+            <EditProduct />
           </TabPanel>
         </TabPanels>
       </Tabs>

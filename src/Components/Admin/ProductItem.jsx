@@ -13,6 +13,7 @@ import { AiFillEdit, AiFillStar } from "react-icons/ai";
 import axios from "axios";
 import { convertor } from "../../Utils/function";
 
+
 const ProductItem = ({
   name,
   brand,
@@ -24,14 +25,17 @@ const ProductItem = ({
   query_url,
   id,
   getData,
-  url,
-}) => {
+  url,}) => {
+
+
   const toast = useToast();
 
-  // const dispatch = useDispatch();
+
+
   const deleteProduct = async () => {
     return axios.delete(`${url}/${id}`);
   };
+
   const handleDelete = (id) => {
     deleteProduct(id)
       .then(() =>
@@ -54,6 +58,9 @@ const ProductItem = ({
       )
       .then(() => getData());
   };
+  const editProduct=()=>{
+    
+  }
 
   return (
     <div>
@@ -140,6 +147,7 @@ const ProductItem = ({
               alignItems="center"
               w="30px"
               p={["1", "1", "2"]}
+              onClick={()=>editProduct()}
             >
               <AiFillEdit />
             </Circle>
