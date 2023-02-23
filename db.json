@@ -6,7 +6,7 @@
       "current_price": 8199,
       "original_price": 11999,
       "rating": 4.4,
-      "rating_count": 4412,
+      "rating_count": 441,
       "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/o/e/-original-imagkgrxzahq3egj.jpeg?q=70",
       "query_url": "https://flipkart.dvishal485.workers.dev/product/infinix-hot-20-play-luna-blue-64-gb/p/itm1e6903eb0203e",
       "id": 1
@@ -332,7 +332,7 @@
     },
     {
       "name": "SAMSUNG Galaxy Tab S7+ With Stylus 6 GB RAM 128 GB ROM 12.4 inch with Wi-Fi Only Tablet (Mystic Black)",
-      "brand": "SAMSUNG Tablet (Mystic Black)",
+      "brand": "SAMSUNG",
       "current_price": 49999,
       "original_price": 76999,
       "rating": 4.2,
@@ -376,7 +376,7 @@
     },
     {
       "name": "realme Pad X 4 GB RAM 64 GB ROM 11 inch with Wi-Fi Only Tablet (Glacier Blue)",
-      "brand": "realme ",
+      "brand": "realme",
       "current_price": 19999,
       "original_price": 29999,
       "rating": 4,
@@ -387,7 +387,7 @@
     },
     {
       "name": "SAMSUNG Galaxy Tab A7 Lite 3 GB RAM 32 GB ROM 8.7 inches with Wi-Fi+4G Tablet (Silver)",
-      "brand": "SAMSUNG (Silver)",
+      "brand": "SAMSUNG",
       "current_price": 13450,
       "original_price": 17500,
       "rating": 4,
@@ -1183,7 +1183,7 @@
       "current_price": 7490,
       "original_price": 10010,
       "rating": 4.7,
-      "rating_count": 78588,
+      "rating_count": 785,
       "thumbnail": "https://rukminim1.flixcart.com/image/312/312/ku1k4280/washing-machine-new/r/t/x/mqsa60h5m-marq-by-flipkart-original-imag793fghyygmbg.jpeg?q=70",
       "query_url": "https://flipkart.dvishal485.workers.dev/product/marq-flipkart-6-kg-5-star-rating-semi-automatic-top-load-white-maroon/p/itm125a12d8f3fef",
       "id": 109
@@ -1920,7 +1920,7 @@
     },
     {
       "name": "SAMSUNG Galaxy Tab S7+ With Stylus 6 GB RAM 128 GB ROM 12.4 inch with Wi-Fi Only Tablet (Mystic Black)",
-      "brand": "SAMSUNG Tablet (Mystic Black)",
+      "brand": "SAMSUNG",
       "current_price": 49999,
       "original_price": 76999,
       "rating": 4.2,
@@ -1975,7 +1975,7 @@
     },
     {
       "name": "SAMSUNG Galaxy Tab A7 Lite 3 GB RAM 32 GB ROM 8.7 inches with Wi-Fi+4G Tablet (Silver)",
-      "brand": "SAMSUNG (Silver)",
+      "brand": "SAMSUNG",
       "current_price": 13450,
       "original_price": 17500,
       "rating": 4,

@@ -11,13 +11,11 @@ import { UserAuthContextProvider } from "./Context/UserAuthContext";
 function App() {
   return (
     <div className="App">
-      <UserAuthContextProvider>
-        <MainRoutes />
-        <Navbar />
-        <Home />
-        <Footer />
-        <Admin />
-      </UserAuthContextProvider>
+        <UserAuthContextProvider>
+          <Navbar/>
+          <MainRoutes/>
+           <Footer />
+        </UserAuthContextProvider>
     </div>
   );
 }
