@@ -25,7 +25,8 @@ const HoverSelect = ({ options }) => {
         onMouseLeave={() => setIsOpen(false)}>
      {options.map((option) => (
       
-          <MenuItem shadow={'base'} h='50px' w='200px' fontSize={'small'} padding='10px' 
+          <MenuItem  h='50px' w='200px' fontSize={'small'} padding='10px' 
+          ml={3}
             key={option.value}
             value={option.value}
             onClick={handleSelectChange}
