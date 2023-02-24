@@ -28,6 +28,7 @@ import React, { useEffect, useState } from "react";
 import { productListGenerator, starGenderator } from "../../Utils/function";
 import { base_url } from "../../Utils/url";
 import CardComponent from "../../Components/CardComponent";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 /*
 http://localhost:8080/mobiles
@@ -48,11 +49,16 @@ const starRating = [
 const url = `${base_url}/allproducts?q=Refrigerator`;
 
 const SearchPage = () => {
+  const [searchParams,setSearchParams]=useSearchParams()
+    const initialFilterValue=searchParams.getAll('filter')
+  const [filterValues,setFilterValues]=useState(initialFilterValue||[])
   const [data, setData] = useState([]);
+ const location=useLocation()
+console.log("location",location)
   const [productList, setProductList] = useState([]);
-  const getData = async () => {
+  const getData = async (params) => {
     axios
-      .get(`${url}`)
+      .get(`${url}`,params)
       .then((res) => {
         setData(res.data);
         setProductList(productListGenerator(res.data));
@@ -60,9 +66,25 @@ const SearchPage = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    getData();
-  }, []);
-  return (
+    const getProductParam={
+      params:{
+        brand:searchParams.getAll('filter')
+      }
+    }
+    getData(getProductParam);
+  }, [location.search]);
+  const handleFilterChange=(value)=>{
+   setFilterValues(value)
+  
+  }
+  console.log(filterValues)
+  useEffect(()=>{
+    let params={}
+    if(filterValues.length){params.filter=filterValues
+    setSearchParams(params)}
+  },[filterValues,setSearchParams])
+
+    return (
     <Box pos={"relative"} border={"0px solid green"} bgColor={"gray.100"}>
       <Grid
         minHeight={"100vh"}
@@ -100,10 +122,10 @@ const SearchPage = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} >
-                <CheckboxGroup  value={''} >
+                <CheckboxGroup  value={filterValues} onChange={handleFilterChange} >
                   <VStack>
                     {productList.map((el) => (
-                      <Checkbox
+                      <Checkbox value={el}
                         key={el + Math.random() + Date.now()}
                         fontSize={"sm"}
                         w={"100%"}
