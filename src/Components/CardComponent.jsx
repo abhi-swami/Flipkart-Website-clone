@@ -32,10 +32,12 @@ export default function CardComponent({
 
   let x = Math.ceil(((original_price - current_price) / original_price) * 100);
   return (
-    <Grid alignItems="center" justifyContent="space-evenly" gap={9}>
+    <Box gap={9}>
       <Box
         bg={useColorModeValue("white", "gray.800")}
-        minW="90%"
+        // border={'1px solid black'}
+        // minW="90%"
+        w="100%"
         gap={10}
         borderWidth="1px"
         shadow="lg"
@@ -146,6 +148,6 @@ export default function CardComponent({
           
         </Box>
       </Box>
-    </Grid>
+    </Box>
   );
 }
