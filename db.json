@@ -90,7 +90,7 @@
     },
     {
       "name": "vivo T1 44W (Starry Sky, 128 GB)",
-      "brand": "vivo GB",
+      "brand": "vivo",
       "current_price": 14499,
       "original_price": 19990,
       "rating": 3.9,
@@ -258,8 +258,8 @@
       "brand": "Infinix",
       "current_price": 8199,
       "original_price": 11999,
-      "rating": 1971,
-      "rating_count": 4.4,
+      "rating": 5,
+      "rating_count": 1109,
       "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/p/r/-original-imagkgrxwg386pjk.jpeg?q=70",
       "query_url": "https://flipkart.dvishal485.workers.dev/product/infinix-hot-20-play-fantasy-purple-64-gb/p/itm1e6903eb0203e",
       "id": 25
@@ -1676,7 +1676,7 @@
     },
     {
       "name": "vivo T1 44W (Starry Sky, 128 GB)",
-      "brand": "vivo GB",
+      "brand": "vivo",
       "current_price": 14499,
       "original_price": 19990,
       "rating": 3.9,

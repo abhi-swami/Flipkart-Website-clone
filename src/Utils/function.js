@@ -57,44 +57,44 @@ export const productListGenerator = (data) => {
   export function starGenderator(val){
     if(val===1){
       return(
-        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar />
       )
     }
     if(val===2){
       return(
         <>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar />
+        <AiFillStar />
         </>
       )
     }
     if(val===3){
       return(
         <>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         </>
       )
     }
     if(val===4){
       return(
         <>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         </>
       )
     }
     if(val===5){
       return(
         <>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
-        <AiFillStar color="rgb(56,142,60)"/>
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
         </>
       )
     }
