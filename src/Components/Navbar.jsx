@@ -41,13 +41,15 @@ navigate("/login")
       alignItems={"center"}
       justifyContent={"center"}
     >
+      
        <Text  fontSize={{ base: "sm", md: "md" }} fontWeight="bold">
           Click-Cart
         </Text> 
       <Box mr={4} h="100%" cursor='pointer' >
-        
+      <Link to='/'>
         <Image src={logo} alt="placeholder image" h="100%"/>
-      </Box>
+        </Link>
+      </Box> 
       <Box   alignItems={"center"}
       justifyContent={"center"} mr={5} w={"40%"} h="83%" border='1px'>
         <SearchBox />

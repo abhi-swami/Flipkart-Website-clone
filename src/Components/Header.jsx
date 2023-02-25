@@ -1,7 +1,34 @@
 import React from 'react'
 import { Box, Button, HStack, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import Slider from '../Components/Slider/Slider'
 const Header = () => {
-    const TopOffers = [
+  // const topSellingProducts = [
+  //   {
+  //     id: 1,
+  //     imgSrc:
+  //     "https://rukminim1.flixcart.com/image/312/312/kqidx8w0/television/m/1/v/32ha0a00-oneplus-original-imag4gy8yezxdhen.jpeg?q=70",
+  //     alt: "",
+  //   },
+  //   {
+  //     id: 2,
+  //     imgSrc:
+  //       "https://images.bewakoof.com/uploads/grid/app/b2g1-1x1-common-1674035537.jpg",
+  //     alt: "",
+  //   },
+  //   {
+  //     id: 3,
+  //     imgSrc:
+  //       "https://images.bewakoof.com/uploads/grid/app/static-1x1-clearance-teesunder399-1674036686.jpg",
+  //     alt: "",
+  //   },
+  //   {
+  //     id: 4,
+  //     imgSrc:
+  //       "https://images.bewakoof.com/uploads/grid/app/winterwear-1x1-common-02-1674035538.jpg",
+  //     alt: "",
+  //   },
+  // ];
+    const topSellingProducts = [
         {
           image:
             "https://rukminim1.flixcart.com/image/312/312/kqidx8w0/television/m/1/v/32ha0a00-oneplus-original-imag4gy8yezxdhen.jpeg?q=70",
@@ -435,40 +462,24 @@ const Header = () => {
 
 
 
-
-      <SimpleGrid w="full" columns={{ base: 2, sm: 4, md: 5, lg: 6 }} spacing={5}>
+{/* 
+      <SimpleGrid w="80%"  marginLeft='2px' columns={{ base: 2, sm: 4, md: 5, lg: 6 }} spacing={5} border="1px"overflow='hidden' borderColor="green">
         <VStack justifyContent='center' alignItems={'center'}>
           <Text as={"b"}>Top Offers</Text>
           <Button backgroundColor={'#2874f0'} color='white' px='6'>View All</Button>
         </VStack>
-        {TopOffers?.map((el, i) => (
-
-
-          <VStack mt={12} w={"full"} key={i}>
-
-            <Image w="100%" src={el.image} alt="err" />
-            <Text fontSize={"sm"} fontWeight="bold">
-              {el.text}
-            </Text>
-            <Text color={"green.400"} fontWeight="semibold" fontSize={"md"}>
-              {el.text2}
-            </Text>
-            <Text color={"gray.500"} fontSize={"sm"}>
-              {el.text3}
-            </Text>
-          </VStack>
-
-        ))}
+      
+        <Slider something={topSellingProducts}/> */}
+       
+      {/* </SimpleGrid> */}
+      <SimpleGrid w="full" columns={6} spacing={5}>
+        <VStack justifyContent='center' alignItems={'center'}>
+          <Text as={"b"}>Top Deals</Text>
+          <Button backgroundColor={'#2874f0'} color='white' px='6'>View All</Button>
+        </VStack>
+        <Slider something={topSellingProducts}/>
+      
       </SimpleGrid>
-
-      <SimpleGrid w="full" columns={3} spacing={5}>
-        {first?.map((el, i) => (
-          <VStack mt={12} w={"full"} key={i}>
-            <Image w="100%" src={el.image} alt="err" />
-          </VStack>
-        ))}
-      </SimpleGrid>
-
 
 
 
