@@ -55,23 +55,23 @@ export const CategoryBarData = [
 export const CarouselData = [
   {
     id: 1,
-    Imgsrc:
-      "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/fd23a7fdee81c3de.jpg?q=50",
+    imgsrc:
+      "https://rukminim1.flixcart.com/fk-p-flap/1088/280/image/28e4abe7fd5dbf22.jpg?q=50",
   },
   {
     id: 2,
-    Imgsrc:
-      "https://rukminim1.flixcart.com/flap/50/50/image/e0c3c470bc6c68d7.jpg?q=50",
+    imgsrc:
+      "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/28e4abe7fd5dbf22.jpg?q=50",
   },
   {
     id: 3,
-    Imgsrc:
-      "https://rukminim1.flixcart.com/fk-p-flap/844/140/image/f2af1d36a53fce46.jpg?q=50",
+    mgsrc:
+      "https://rukminim1.flixcart.com/flap/1688/280/image/e0c3c470bc6c68d7.jpg?q=50",
   },
   {
     id: 4,
     Imgsrc:
-      "https://rukminim1.flixcart.com/fk-p-flap/50/50/image/1a3e6851ee61bff9.jpeg?q=50",
+      "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/beacdf4c7793a4b2.jpg?q=50",
   },
 ];
 
