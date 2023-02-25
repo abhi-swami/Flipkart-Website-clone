@@ -26,8 +26,8 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
    const [email,setEmail]=useState("")
    const [password,setPassword]=useState("")
    const [error,setError]=useState("")
-   const {login}=useUserAuth()
-  //  const navigate=useNavigate()
+   const {login,googleSignIn}=useUserAuth()
+   const navigate=useNavigate()
    const handleSubmit=async ()=>{
     setError("")
   try{
@@ -39,12 +39,22 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
       duration: 2000,
       isClosable: true,
     })
-  //  navigate("/")
+   navigate("/search")
   onClose()
   }
   catch(err){
   setError(err.message)
   }}
+  const handleGoogleSignIn=async ()=>{
+    await googleSignIn()
+    try{
+await googleSignIn()
+navigate("/search")
+    }
+    catch(err){
+      setError(err.message)
+    }
+  }
   return (
     <>
    
@@ -135,7 +145,8 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
               </Stack>
               <Center>or</Center>
               <Center>
-                <Button
+                <Button onClick={handleGoogleSignIn} colorScheme={"blue"}
+                    variant={"solid"}
                   w={"full"}
                   maxW={"md"}
                   

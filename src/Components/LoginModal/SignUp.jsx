@@ -50,7 +50,7 @@ setError(err.message)
       isClosable: true,
     })
     }
-    <Box className="container" >
+      <Box className="container" w="30%" borderRadius={"15px"}justifyContent={'center'} shadow={'dark-lg'} alignItems={'center'} align={'center'} margin={"auto"}>
           <Box className="left_col">
             <Box display={"flex"} flexDirection="column" gap={"10px"}>
               <Heading textAlign='center' color={"#2a73f3"}
@@ -102,7 +102,7 @@ setError(err.message)
                   <Text _hover={{textDecoration:"underline"}}>Forgot your Password?</Text>
                 </Box>
               </FormControl>
-              <Stack spacing={6}>
+              <Stack spacing={1}>
                 <Box>
                   <Button onClick={handleSubmit}
                     w={"100%"}
@@ -118,8 +118,8 @@ setError(err.message)
               </Stack>
               <Center>or</Center>
               
-              <Box
-                mt={"60px"}
+              <Box 
+                mt={"-5px"}
                 color={"blue.500"}
                 display={["grid","grid",'flex']}
                 gap={1}
