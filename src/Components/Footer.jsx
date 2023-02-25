@@ -5,56 +5,31 @@ import {
   SimpleGrid,
   Text,
   Link,
-  VisuallyHidden,
-  chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
-
-// import AppStoreBadge from '@/components/AppStoreBadge';
-// import PlayStoreBadge from '@/components/PlayStoreBadge';
-
+import "./Brand.css";
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={"500"} mb={2}>
+    <Text color={"#878787"} fontWeight={"500"} mb={2} fontSize={"12px"}>
       {children}
     </Text>
-  );
-};
-
-const SocialButton = ({ children, label, href }) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
   );
 };
 
 export default function Footer() {
   return (
     <Box
+      className="bg"
       margin={0}
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={"#"}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container fontSize={12} maxW={"6xl"} >
-        <SimpleGrid columns={{ base: 2, sm: 2, md: 6 }} spacing={8}>
+      <Container fontSize={"12px"} lineHeight={"24px"} maxW={"6xl"} p={10}>
+        <SimpleGrid
+          color={"#ffffff"}
+          columns={{ base: 2, sm: 2, md: 6 }}
+          spacing={8}
+        >
           <Stack align={"flex-start"}>
             <ListHeader>ABOUT</ListHeader>
             <Link href="/">Contact Us</Link>
@@ -84,7 +59,7 @@ export default function Footer() {
             <Link href={"#"}>EPR Compliance</Link>
           </Stack>
 
-          <Stack align={"flex-start"}>
+          <Stack borderRight={"2px solid #878787 "} align={"flex-start"}>
             <ListHeader>SOCIAL</ListHeader>
             <Link href={"#"}>Facebook</Link>
             <Link href={"#"}>Twitter</Link>

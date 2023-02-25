@@ -1,0 +1,12 @@
+.heading{
+   font-size:14px;
+   font-weight: bold;
+   color:#878787;
+   margin: 12px 0 12px 0;
+}
+.text{
+    font-size: 12px;
+}
+.bg{
+    background: rgb(2, 26, 59);
+}
