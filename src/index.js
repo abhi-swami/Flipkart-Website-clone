@@ -2,20 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import SearchContextProvider from "./Context/SearchContext";
+<<<<<<< HEAD
+=======
+import { store } from "./Redux/store";
+
+
+>>>>>>> 930029a35f4253df16afb19ed803d853fd9fc9c5
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ChakraProvider>
     <BrowserRouter>
-    {/* <Provider store={store}> */}
+
       <SearchContextProvider>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </SearchContextProvider>
-      {/* </Provider> */}
+
     </BrowserRouter>
   </ChakraProvider>
 );

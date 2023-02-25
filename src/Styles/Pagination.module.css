@@ -1,0 +1,27 @@
+.paginationWrapper {
+  margin: 20px auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.paginationWrapper .prevBtn {
+  width: fit-content;
+}
+
+.paginationWrapper .nextBtn {
+  width: fit-content;
+}
+
+.paginationWrapper button {
+ 
+  font-size: 16px;
+  background-color: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.paginationWrapper .activeBtn {
+  background-color: #03a9f5;
+  color: white;
+  border-radius: 50%;
+}
