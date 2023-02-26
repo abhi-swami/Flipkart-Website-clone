@@ -107,7 +107,7 @@ const AddProducts = () => {
         </Flex>
       ),
     });
-    await fetch("http://localhost:8080/testing", {
+    await fetch("https://click-cart-api.onrender.com/testing", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
