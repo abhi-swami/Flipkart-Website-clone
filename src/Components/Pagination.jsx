@@ -8,7 +8,7 @@ import styles from  "../Styles/Pagination.module.css";
 
 const Pagination = ({posts}) => {
   // const posts=useSelector((store)=>store.posts);
-  console.log(posts)
+
   const {  perPage, activePage, } = useSelector((store) => {
     return {
       perPage: store.searchReducer.perPage,

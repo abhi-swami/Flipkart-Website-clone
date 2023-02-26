@@ -3180,5 +3180,54 @@
       "query_url": "https://flipkart.dvishal485.workers.dev/product/godrej-225-l-direct-cool-single-door-3-star-refrigerator-base-drawer/p/itm72ad947ab72fe",
       "id": 24
     }
+  ],
+  "cart": [
+    {
+      "name": "SAMSUNG 189 L Direct Cool Single Door 5 Star Refrigerator with Base Drawer  with Digital Inverter",
+      "brand": "SAMSUNG",
+      "current_price": 17990,
+      "original_price": 24999,
+      "rating": 4.9,
+      "rating_count": 86788,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/refrigerator-new/a/5/o/-original-imagmxh2wz2fd8nz.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/samsung-189-l-direct-cool-single-door-5-star-refrigerator-base-drawer-digital-inverter/p/itm673c321741d52",
+      "id": 123,
+      "quantity": 1
+    }
+  ],
+  "favourite": [
+    {
+      "name": "Infinix HOT 20 Play (Luna Blue, 64 GB)",
+      "brand": "Infinix",
+      "current_price": 8199,
+      "original_price": 11999,
+      "rating": 4.4,
+      "rating_count": 441,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/o/e/-original-imagkgrxzahq3egj.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/infinix-hot-20-play-luna-blue-64-gb/p/itm1e6903eb0203e",
+      "id": 1
+    },
+    {
+      "name": "Infinix HOT 20 Play (Racing Black, 64 GB)",
+      "brand": "Infinix",
+      "current_price": 8199,
+      "original_price": 11999,
+      "rating": 4.4,
+      "rating_count": 4678,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/p/f/u/-original-imagkgrxdsqpdznh.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/infinix-hot-20-play-racing-black-64-gb/p/itm1e6903eb0203e",
+      "id": 2
+    },
+    {
+      "name": "APPLE iPad (9th Gen) 64 GB ROM 10.2 inch with Wi-Fi Only (Space Grey)",
+      "brand": "APPLE",
+      "current_price": 29900,
+      "original_price": 33900,
+      "rating": 4.7,
+      "rating_count": 2317,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/ktop5e80/tablet/x/9/o/mk2k3hn-a-apple-original-imag6yy7xjjugz4w.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/apple-ipad-9th-gen-64-gb-rom-10-2-inch-wi-fi-only-space-grey/p/itmd7d2c4840fa04",
+      "id": 26
+    }
   ]
 }

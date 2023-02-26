@@ -22,7 +22,6 @@ const HoverSelect = ({ options }) => {
 
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
-    console.log(selectedOption);
     setIsOpen(false);
   };
 
