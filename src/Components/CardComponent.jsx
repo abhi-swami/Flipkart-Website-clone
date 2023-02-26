@@ -2,33 +2,67 @@ import {
   Flex,
   Box,
   Image,
-
   useColorModeValue,
   Text,
   HStack,
-  Grid,
+  useToast,
+
 
 } from "@chakra-ui/react";
-import { useContext } from "react";
+import { useEffect,useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSuitHeartFill } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import { convertor } from "../Utils/function";
+import { LoginContext } from "../Context/LoginContext";
+import { useUserAuth } from "../Context/UserAuthContext";
+import { useDispatch,useSelector } from "react-redux";
+import { postFavouriteProduct } from "../Redux/Favorite/favourite.action";
+import { base_url } from "../Utils/url";
 
 
-export default function CardComponent({
-  name,
-  brand,
-  current_price,
-  original_price,
-  rating,
-  rating_count,
-  thumbnail,
-  query_url,
-  id,
-}) {
+
+export default function CardComponent({cardData}) {
   const navigate = useNavigate();
-  const handleheart = () => {};
+  const { onOpen } = useContext(LoginContext);
+  const { user, } = useUserAuth();
+  const {
+    name,
+    brand,
+    current_price,
+    original_price,
+    rating,
+    rating_count,
+    thumbnail,
+    query_url,
+    id,
+  }=cardData;
+  const toast=useToast()
+  const dispatch=useDispatch();
+  const favouriteProduct=useSelector((store)=>store.favouriteReducer.data)
+
+
+
+  const handleheart = () => {
+    if(!user){
+      onOpen()
+    }
+    if(user){
+      const url=`${base_url}/favourite`
+      dispatch(postFavouriteProduct(cardData,url)).then(()=>{
+        toast({
+          position: `top`,
+          title: "Product Add To Wish List",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      })
+    }
+  };
+  const handleClick=()=>{
+    navigate(`/product/${id}`)
+  }
 
   let x = Math.ceil(((original_price - current_price) / original_price) * 100);
   return (
@@ -43,6 +77,7 @@ export default function CardComponent({
         shadow="lg"
         position="relative"
         pt={3}
+        
       >
         {rating > 4.5 ? (
           <Text
@@ -65,9 +100,11 @@ export default function CardComponent({
           p={"3px"}
           bg={"white"}
           color={"rgb(200,200,200)"}
-          _hover={{ color: "rgb(40,116,240)" }}
+          _hover={{ color: "rgb(40,116,240)",cursor:'pointer' }}
           fontSize={"15px"}
           borderRadius={"sm"}
+          onClick={handleheart}
+
         >
           <BsSuitHeartFill />
         </Text>
@@ -79,7 +116,7 @@ export default function CardComponent({
           margin={"auto"}
         />
 
-        <Box p={2}>
+        <Box p={2 } onClick={handleClick}>
           <Flex justifyContent={"space-between"}>
             <Text
               fontFamily={"montserrat,sans-serif"}
@@ -101,6 +138,7 @@ export default function CardComponent({
               cursor={"pointer"}
               lineHeight="tight"
               isTruncated
+              onClick={handleClick}
             >
               {name}
             </Box>

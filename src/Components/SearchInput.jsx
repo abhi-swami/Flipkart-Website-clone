@@ -1,16 +1,17 @@
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
-import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import { SearchContext } from "../Context/SearchContext";
-
+import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 
 const initial = { search: "" };
 
 const SearchBox = () => {
-  const {inputQuery } = useContext(SearchContext);
+  const { inputQuery } = useContext(SearchContext);
   const [searchtext, setSearchext] = useState(initial);
   const { value } = searchtext.search;
-
+  const navigate = useNavigate();
+  // let ref = useRef();
 
   const handleSearch = (e) => {
     const { name, value } = e.target;
@@ -19,11 +20,22 @@ const SearchBox = () => {
   };
 
   const handleKeyDown = (e) => {
-    if(e.key==="Enter"){
-      // navigate("/searchPage")
-
+    if (e.key === "Enter") {
+      navigate("/search");
     }
   };
+  // useEffect(() => {
+  //   if (searchtext) {
+  //     ref.current = setTimeout(() => {
+  //       inputQuery(searchtext.search);
+  //     }, 800);
+  //     const cleanUp = () => {
+  //       clearTimeout(ref.current);
+  //       navigate("/search");
+  //     };
+  //     return cleanUp;
+  //   }
+  // }, [searchtext]);
   return (
     <InputGroup h="100%">
       <Input
@@ -39,6 +51,7 @@ const SearchBox = () => {
         placeholder="Search for products,brands and more"
         w="100%"
         onChange={handleSearch}
+        onKeyDown={handleKeyDown}
       />
       <InputRightElement
         h="100%"
@@ -46,7 +59,6 @@ const SearchBox = () => {
         cursor={"pointer"}
         pointerEvents="auto"
         onClick={handleSearch}
-        onKeyDown={handleKeyDown}
         children={<FaSearch color="#2974f2" />}
       />
     </InputGroup>

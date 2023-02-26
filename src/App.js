@@ -1,21 +1,28 @@
 import "./App.css";
-import Home from "./Pages/Home/Home.jsx";
+
 // import Slider from './sample/Slider';
-import Footer from "./Components/Footer";
-import Admin from "./Pages/Admin/Admin";
+import NewFooter from "./Components/NewFooter";
+
 
 import Navbar from "./Components/Navbar";
 import MainRoutes from "./Routes/MainRoutes";
-import { UserAuthContextProvider } from "./Context/UserAuthContext";
+import {
+
+  useUserAuth,
+} from "./Context/UserAuthContext";
+
 
 function App() {
+  const  {user}  = useUserAuth();
+
   return (
     <div className="App">
-        <UserAuthContextProvider>
-          <Navbar/>
-          <MainRoutes/>
-           <Footer />
-        </UserAuthContextProvider>
+      <Navbar />
+      <MainRoutes />
+      {user?.email !== "admin@clickcart.in" ? (
+        <NewFooter />
+      ) : null}
+      {/* <NewFooter /> */}
     </div>
   );
 }

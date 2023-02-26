@@ -41,7 +41,6 @@ import { getSearchProducts } from "../../Redux/Search/action";
 import { TbArrowsDownUp } from "react-icons/tb";
 import Pagination from "../../Components/Pagination";
 
-
 const rating = [
   { id: 1, rating: 2 },
   { id: 2, rating: 3 },
@@ -73,7 +72,7 @@ const SearchPage = () => {
   }, shallowEqual);
   const varible = filterStar.length > 0 ? filterStar?.map(Number) : 0;
   const filterProducts = products?.filter((el) => el?.rating >= varible);
-  console.log(filterProducts);
+
 
   const handleFilterValue = (val) => {
     setFilterCategory(val);
@@ -103,7 +102,6 @@ const SearchPage = () => {
     }
     if (filterStar.length !== 0 && isActive === false) {
       param.rating = filterStar;
-      console.log(isActive);
       setSearchParamsStar(createSearchParams({ rating: filterStar }));
     } else if (filterStar.length === 0) {
       setSearchParamsStar(param);
@@ -120,16 +118,21 @@ const SearchPage = () => {
     } else if (sortStar.length === 0) {
       setSearchParams(param);
     }
-  }, [filterCategory, filterStar, sortStar, priceSorting, setSearchParams]);
+  }, [
+    filterCategory,
+    filterStar,
+    sortStar,
+    priceSorting,
+    isActive,
+    setSearchParams,
+    setSearchParamsStar,
+  ]);
 
   useEffect(() => {
     if (products.length === 0 || location || query) {
       const url = `${base_url}/allproducts?q=${query}`;
       const getProductsParam = {
         params: {
-          // '_page': currentPage,
-          // '_page': 1,
-          // '_limit': 6,
           brand: searchParams.getAll("filter"),
           rating_gte: isActive ? null : searchParamsStar.getAll("rating"),
           _sort:
@@ -148,7 +151,15 @@ const SearchPage = () => {
       };
       dispatch(getSearchProducts(getProductsParam, url));
     }
-  }, [location.search, query]);
+  }, [
+    location.search,
+    query,
+    isActive,
+    priceSorting.length,
+    products.length,
+    sortStar.length,
+  ]);
+
   useEffect(() => {
     if (query) {
       const url = `${base_url}/allproducts?q=${query}`;
@@ -179,7 +190,8 @@ const SearchPage = () => {
               textAlign={"left"}
               my={5}
             >
-              Showing Result for {query}
+              {query.length>2 && `Showing Result for ${query}`}
+              
             </Heading>
             <Heading size={"md"} fontWeight={"bold"} textAlign={"left"} my={5}>
               Filter
@@ -327,7 +339,7 @@ const SearchPage = () => {
               })
               .map((el) => (
                 <Box key={el.id} border={"0px solid green"}>
-                  <CardComponent key={el.id} {...el} />
+                  <CardComponent key={el.id} cardData={el} />
                 </Box>
               ))}
           </SimpleGrid>

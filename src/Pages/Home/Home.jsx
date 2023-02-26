@@ -3,6 +3,7 @@ import Carousel from '../../Components/Carousel'
 import CategoryBar from "../../Components/CategoryBar/CategoryBar";
 import Header from "../../Components/Header";
 
+
 import { CategoryBarData } from "../../Datas";
 
 import "./Home.css";
