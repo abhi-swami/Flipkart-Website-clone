@@ -3180,5 +3180,172 @@
       "query_url": "https://flipkart.dvishal485.workers.dev/product/godrej-225-l-direct-cool-single-door-3-star-refrigerator-base-drawer/p/itm72ad947ab72fe",
       "id": 24
     }
+  ],
+  "carts": [
+    {
+      "name": "Lenovo Lenovo IdeaPad Slim 3 Intel Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 81X800J3IN | 8...",
+      "brand": "Lenovo",
+      "current_price": 37000,
+      "original_price": 59890,
+      "rating": 4.7,
+      "rating_count": 89474,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/lenovo-ideapad-slim-3-intel-core-i3-11th-gen-8-gb-512-gb-ssd-windows-11-home-81x800j3in-81x800lgin-thin-light-laptop/p/itm1c6de69e1069c",
+      "id": 8
+    },
+    {
+      "name": "ASUS VivoBook 14 (2021) Celeron Dual Core - (4 GB/256 GB SSD/Windows 11 Home) X415MA-BV011W Thin and L...",
+      "brand": "ASUS",
+      "current_price": 23990,
+      "original_price": 33990,
+      "rating": 4.3,
+      "rating_count": 47748,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/l2m78280/computer/z/e/f/-original-imagdx9szs8xz2rk.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/asus-vivobook-14-2021-celeron-dual-core-4-gb-256-gb-ssd-windows-11-home-x415ma-bv011w-thin-light-laptop/p/itm8f9bebd99f5c0",
+      "id": 10
+    },
+    {
+      "name": "MSI Bravo 15 Ryzen 5 Hexa Core AMD R5-5600H - (8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/AMD Radeo...",
+      "brand": "MSI",
+      "current_price": 47990,
+      "original_price": 72990,
+      "rating": 4.7,
+      "rating_count": 48938,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/7/3/l/-original-imagha3pvvc2xuz2.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/msi-bravo-15-ryzen-5-hexa-core-amd-r5-5600h-8-gb-512-gb-ssd-windows-11-home-4-graphics-amd-radeon-rx-5500m-144-hz-b5dd-410in-gaming-laptop/p/itm12cedc4da03bc",
+      "id": 11
+    },
+    {
+      "name": "Lenovo IdeaPad 3 Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 82H801L7IN | 82H802FJIN | 82H802...",
+      "brand": "Lenovo",
+      "current_price": 38699,
+      "original_price": 59390,
+      "rating": 3.5,
+      "rating_count": 479398,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/kruyw7k0/computer/f/i/u/na-thin-and-light-laptop-lenovo-original-imag5jy6fsm2yx4q.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/lenovo-ideapad-3-core-i3-11th-gen-8-gb-512-gb-ssd-windows-11-home-82h801l7in-82h802fjin-82h802l3in-82h801lhin-thin-light-laptop/p/itm0e009f57a591b",
+      "id": 12
+    },
+    {
+      "name": "DELL Vostro Core i3 11th Gen - (8 GB/1 TB HDD/256 GB SSD/Windows 11 Home) Vostro 3510 Thin and Light L...",
+      "brand": "DELL",
+      "current_price": 39990,
+      "original_price": 58489,
+      "rating": 3.7,
+      "rating_count": 84889,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/x/o/u/-original-imaghkk994ybh4fh.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/dell-vostro-core-i3-11th-gen-8-gb-1-tb-hdd-256-gb-ssd-windows-11-home-3510-thin-light-laptop/p/itm94af7689e9e9a",
+      "id": 14
+    },
+    {
+      "name": "realme Book (Slim) Core i3 11th Gen - (8 GB/256 GB SSD/Windows 10 Home) RMNB1001 Thin and Light Laptop",
+      "brand": "realme",
+      "current_price": 36990,
+      "original_price": 54999,
+      "rating": 4.3,
+      "rating_count": 48737,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/ksez24w0/computer/h/8/9/rmnb1001-thin-and-light-laptop-realme-original-imag5zhgcstmjbxg.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/realme-book-slim-core-i3-11th-gen-8-gb-256-gb-ssd-windows-10-home-rmnb1001-thin-light-laptop/p/itm7109ffde0b2cc",
+      "id": 15
+    },
+    {
+      "name": "Lenovo Lenovo IdeaPad Slim 3 Intel Core i5 11th Gen - (16 GB/512 GB SSD/Windows 11 Home) 15ITL6 Thin a...",
+      "brand": "Lenovo",
+      "current_price": 52890,
+      "original_price": 80290,
+      "rating": 4.4,
+      "rating_count": 89485,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/1/b/0/15itl6-thin-and-light-laptop-lenovo-original-imagkwgzafjp33es.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/lenovo-ideapad-slim-3-intel-core-i5-11th-gen-16-gb-512-gb-ssd-windows-11-home-15itl6-thin-light-laptop/p/itm3a8a423a53c02",
+      "id": 16
+    },
+    {
+      "name": "HP 14s Intel Core i3 11th Gen - (8 GB/256 GB SSD/Windows 11 Home) 14s - dy2507TU Thin and Light Laptop",
+      "brand": "HP",
+      "current_price": 37990,
+      "original_price": 47206,
+      "rating": 4.1,
+      "rating_count": 94774,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/l5h2xe80/computer/h/i/p/14s-dy5005tu-thin-and-light-laptop-hp-original-imagg4rc7n75zqkp.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/hp-14s-intel-core-i3-11th-gen-8-gb-256-gb-ssd-windows-11-home-dy2507tu-thin-light-laptop/p/itm183e95bd1f23b",
+      "id": 17
+    },
+    {
+      "name": "acer Aspire 3 Ryzen 3 Dual Core 3250U - (8 GB/256 GB SSD/Windows 11 Home) A315-23 Laptop",
+      "brand": "acer",
+      "current_price": 26990,
+      "original_price": 42999,
+      "rating": 4.5,
+      "rating_count": 74379,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/q/0/8/-original-imagkgr3wcfexyd8.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/acer-aspire-3-ryzen-dual-core-3250u-8-gb-256-gb-ssd-windows-11-home-a315-23-laptop/p/itm6961e2f1ddc21",
+      "id": 18
+    },
+    {
+      "name": "ASUS Vivobook 15 Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS Thin and Light La...",
+      "brand": "ASUS",
+      "current_price": 37990,
+      "original_price": 50990,
+      "rating": 4.4,
+      "rating_count": 4,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/o/t/h/-original-imagg6t9pauha4t7.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/asus-vivobook-15-core-i3-11th-gen-8-gb-512-gb-ssd-windows-11-home-x515ea-ej322ws-thin-light-laptop/p/itmc6461360364e0",
+      "id": 19
+    },
+    {
+      "name": "Lenovo IdeaPad 3 Core i5 12th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15IAU7 Thin and Light Laptop",
+      "brand": "Lenovo",
+      "current_price": 56049,
+      "original_price": 76890,
+      "rating": 4.7,
+      "rating_count": 54764,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/a/c/3/-original-imagg56h9gat842s.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/lenovo-ideapad-3-core-i5-12th-gen-8-gb-512-gb-ssd-windows-11-home-15iau7-thin-light-laptop/p/itm496ac469abb9e",
+      "id": 20
+    },
+    {
+      "name": "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+      "brand": "HP",
+      "current_price": 52990,
+      "original_price": 56903,
+      "rating": 4.3,
+      "rating_count": 89498,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/k/b/8/15s-fr4000tu-thin-and-light-laptop-hp-original-imaghrcwmt7v5svk.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/hp-intel-core-i5-11th-gen-8-gb-512-gb-ssd-windows-11-home-15s-fr4000tu-thin-light-laptop/p/itm7fbaaf16c90f1",
+      "id": 21
+    },
+    {
+      "name": "HP Ryzen 5 Hexa Core 5500U - (16 GB/512 GB SSD/Windows 11 Home) 15s- eq2182AU Thin and Light Laptop",
+      "brand": "HP",
+      "current_price": 49123,
+      "original_price": 59108,
+      "rating": 4.5,
+      "rating_count": 97347,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/5/6/i/-original-imaggshd5zgfe8ev.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/hp-ryzen-5-hexa-core-5500u-16-gb-512-gb-ssd-windows-11-home-15s-eq2182au-thin-light-laptop/p/itm09b322c037285",
+      "id": 22
+    },
+    {
+      "name": "HP Ryzen 3 Quad Core 5300U - (8 GB/512 GB SSD/Windows 11 Home) 15s-eq2143au Thin and Light Laptop",
+      "brand": "HP",
+      "current_price": 38990,
+      "original_price": 45991,
+      "rating": 4.7,
+      "rating_count": 47939,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/5/6/i/-original-imaggshd5zgfe8ev.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/hp-ryzen-3-quad-core-5300u-8-gb-512-gb-ssd-windows-11-home-15s-eq2143au-thin-light-laptop/p/itm833bca55e158b",
+      "id": 23
+    },
+    {
+      "name": "Lenovo IdeaPad 3 Ryzen 5 Hexa Core 5500U - (8 GB/512 GB SSD/Windows 11 Home) 15ALC6 Thin and Light Lap...",
+      "brand": "Lenovo",
+      "current_price": 47039,
+      "original_price": 68490,
+      "rating": 3.6,
+      "rating_count": 57498,
+      "thumbnail": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/2/3/5/-original-imagg5hhjunrv4e4.jpeg?q=70",
+      "query_url": "https://flipkart.dvishal485.workers.dev/product/lenovo-ideapad-3-ryzen-5-hexa-core-5500u-8-gb-512-gb-ssd-windows-11-home-15alc6-thin-light-laptop/p/itm790def6ef6b6f",
+      "id": 24
+    }
   ]
 }
