@@ -21,7 +21,9 @@
 
 ## I request you all to please do not use Link tag provided by Chakra rather use Link tag provided by react router dom.
 
+### JSON Server API - 
 
+https://click-cart-api.onrender.com/
 
 ## Contributors :-
 
