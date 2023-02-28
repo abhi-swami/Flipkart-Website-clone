@@ -34,7 +34,7 @@ export const CategoryBarData = [
       "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f09b2d254acb48a.png?q=100",
     category: "Beauty",
   },
- 
+
   {
     imageSrc:
       "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/1cfc2d91f717510a.png?q=100",
@@ -74,4 +74,3 @@ export const CarouselData = [
       "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/beacdf4c7793a4b2.jpg?q=50",
   },
 ];
-
