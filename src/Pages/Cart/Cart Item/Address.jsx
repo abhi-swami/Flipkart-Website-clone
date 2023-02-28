@@ -23,8 +23,8 @@ import Success from "./Success";
 
 export default function Address({ isOpen, onOpen, onClose }) {
   const [isSuccess, setIsSuccess] = useState(false);
-  const {  logOut,  } = useUserAuth();
-  const navigate=useNavigate()
+  const { logOut } = useUserAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     setIsSuccess(true);
@@ -35,8 +35,8 @@ export default function Address({ isOpen, onOpen, onClose }) {
   const handleClose = () => {
     setIsSuccess(false);
     // inputLogout()
-    logOut()
-    navigate('/',{relative:true})
+    logOut();
+    navigate("/", { relative: true });
   };
 
   return (

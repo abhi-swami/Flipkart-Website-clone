@@ -34,6 +34,6 @@ export const getSearchProducts =
       dispatch(getSearchError());
     }
   };
-  export const handlePage = (param) => (dispatch) => {
-    dispatch(handldePageChange(param));
-  };
+export const handlePage = (param) => (dispatch) => {
+  dispatch(handldePageChange(param));
+};

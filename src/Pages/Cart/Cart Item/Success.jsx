@@ -1,5 +1,5 @@
 import {
-    Text,
+  Text,
   Box,
   Alert,
   AlertIcon,
@@ -13,16 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 
-export default function Success({isSuccess, handleOpen,handleClose}) {
-
-
+export default function Success({ isSuccess, handleOpen, handleClose }) {
   const finalRef = useRef(null);
 
   return (
     <Modal finalFocusRef={finalRef} isOpen={isSuccess} zIndex={1}>
       <ModalOverlay />
       <ModalContent>
-        <ModalCloseButton zIndex={2} onClick={()=>handleClose()} />
+        <ModalCloseButton zIndex={2} onClick={() => handleClose()} />
         <ModalBody bgColor={"rgb(198,246,213)"}>
           <Alert
             status="success"
@@ -35,14 +33,16 @@ export default function Success({isSuccess, handleOpen,handleClose}) {
             width="100%"
             onClick={handleClose}
           >
-            <AlertIcon  boxSize="40px" mr={0} />
+            <AlertIcon boxSize="40px" mr={0} />
             <Box>
               <AlertTitle mt={4} mb={1} fontSize="lg">
                 Order Placed !
               </AlertTitle>
               <AlertDescription maxWidth="sm">
-                Thanks for shopping with us. 
-                Your Order will be delivered in <Text as="span" color={"lightcoral"}>2-3 days</Text>
+                Thanks for shopping with us. Your Order will be delivered in{" "}
+                <Text as="span" color={"lightcoral"}>
+                  2-3 days
+                </Text>
               </AlertDescription>
             </Box>
           </Alert>

@@ -37,7 +37,7 @@ import {
   useLocation,
   useSearchParams,
 } from "react-router-dom";
-import { getSearchProducts } from "../../Redux/Search/action";
+import { getSearchProducts } from "../../Redux/Favorite/Search/action";
 import { TbArrowsDownUp } from "react-icons/tb";
 import Pagination from "../../Components/Pagination";
 
@@ -72,7 +72,6 @@ const SearchPage = () => {
   }, shallowEqual);
   const varible = filterStar.length > 0 ? filterStar?.map(Number) : 0;
   const filterProducts = products?.filter((el) => el?.rating >= varible);
-
 
   const handleFilterValue = (val) => {
     setFilterCategory(val);
@@ -190,8 +189,7 @@ const SearchPage = () => {
               textAlign={"left"}
               my={5}
             >
-              {query.length>2 && `Showing Result for ${query}`}
-              
+              {query.length > 2 && `Showing Result for ${query}`}
             </Heading>
             <Heading size={"md"} fontWeight={"bold"} textAlign={"left"} my={5}>
               Filter

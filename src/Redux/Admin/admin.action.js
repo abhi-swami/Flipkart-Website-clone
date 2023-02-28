@@ -1,4 +1,9 @@
-import { REQUEST, ERROR, GET_SUCCESS, HANDLE_PAGE_CHANGE } from "./admin.actionType";
+import {
+  REQUEST,
+  ERROR,
+  GET_SUCCESS,
+  HANDLE_PAGE_CHANGE,
+} from "./admin.actionType";
 
 import { AdminApiFunction } from "./admin.api";
 
@@ -34,6 +39,6 @@ export const getSearchProducts =
       dispatch(getSearchError());
     }
   };
-  export const handlePage = (param) => (dispatch) => {
-    dispatch(handldePageChange(param));
-  };
+export const handlePage = (param) => (dispatch) => {
+  dispatch(handldePageChange(param));
+};

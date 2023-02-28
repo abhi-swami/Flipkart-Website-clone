@@ -1,4 +1,3 @@
-
 import { REQUEST, ERROR, GET_SUCCESS, HANDLE_PAGE_CHANGE } from "./actionType";
 
 const initial = {
@@ -25,7 +24,6 @@ export const searchReducer = (state = initial, action) => {
       };
     }
     case GET_SUCCESS: {
-
       return {
         ...state,
         isLoading: false,
@@ -36,10 +34,10 @@ export const searchReducer = (state = initial, action) => {
       return {
         ...state,
         isLoading: false,
-        activePage:action.payload
+        activePage: action.payload,
       };
     }
-    
+
     default: {
       return {
         ...state,

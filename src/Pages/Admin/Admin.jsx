@@ -102,7 +102,6 @@ const Admin = () => {
           <Tab>Home</Tab>
           <Tab>All Products</Tab>
           <Tab>Add Product</Tab>
-        
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -117,11 +116,10 @@ const Admin = () => {
 
             <Grid
               mt={8}
-          
               templateColumns="repeat(4, 1fr)"
-              justifyContent={'space-evenly'}
-              alignItems={'center'}
-              _hover={{cursor:'pointer'}}
+              justifyContent={"space-evenly"}
+              alignItems={"center"}
+              _hover={{ cursor: "pointer" }}
               gap={6}
             >
               <GridItem backgroundColor={"green"} style={boxStyle}>
@@ -137,13 +135,13 @@ const Admin = () => {
                 {tv} TV
               </GridItem>
               <GridItem style={boxStyle} backgroundColor={"cyan.500"}>
-                {laptops} Laptops 
+                {laptops} Laptops
               </GridItem>
               <GridItem style={boxStyle} backgroundColor={"lightcoral"}>
-                {washingMachine} Washing Machine 
+                {washingMachine} Washing Machine
               </GridItem>
               <GridItem style={boxStyle} backgroundColor={"yellow.400"}>
-                {refrigerators}  Refrigerators
+                {refrigerators} Refrigerators
               </GridItem>
             </Grid>
           </TabPanel>
@@ -159,7 +157,7 @@ const Admin = () => {
             </Heading>
             <AddProducts />
           </TabPanel>
-          
+
           <TabPanel>
             <Heading size={"lg"} textAlign={"left"} mt={4}>
               All Products List

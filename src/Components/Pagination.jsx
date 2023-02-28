@@ -2,7 +2,7 @@ import { Button } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { handlePage } from "../Redux/Search/action";
+import { handlePage } from "../Redux/Favorite/Search/action";
 import styles from "../Styles/Pagination.module.css";
 
 const Pagination = ({ posts }) => {

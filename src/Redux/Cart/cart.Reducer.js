@@ -16,7 +16,6 @@ const initial = {
 };
 
 export const cartReducer = (state = initial, action) => {
-  
   switch (action.type) {
     case REQUEST: {
       return {
@@ -39,7 +38,11 @@ export const cartReducer = (state = initial, action) => {
       };
     }
     case PATCH_SUCCESS: {
-      const updatedData=state.data.map((el)=>el.id===action.payload.id?{...el,quantity:action.payload.quantity}:el)
+      const updatedData = state.data.map((el) =>
+        el.id === action.payload.id
+          ? { ...el, quantity: action.payload.quantity }
+          : el
+      );
       return {
         ...state,
         isLoading: false,
@@ -54,7 +57,7 @@ export const cartReducer = (state = initial, action) => {
       };
     }
     case DELETE_SUCCESS: {
-      const newData=state.data.filter((el)=>el.id!==action.payload)
+      const newData = state.data.filter((el) => el.id !== action.payload);
       return {
         ...state,
         isLoading: false,

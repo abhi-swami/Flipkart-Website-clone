@@ -7,7 +7,12 @@ import {
   DELETE_SUCCESS,
 } from "./cart.actionType";
 
-import { CartApiPostReq,CartApiGetReq,CartApiDeleteReq,CartApiPatchReq } from "./cart.api";
+import {
+  CartApiPostReq,
+  CartApiGetReq,
+  CartApiDeleteReq,
+  CartApiPatchReq,
+} from "./cart.api";
 
 const CarthRequest = () => {
   return {
@@ -45,7 +50,6 @@ const CartError = () => {
 };
 
 export const PostCartProduct = (cartdata) => async (dispatch) => {
- 
   dispatch(CarthRequest());
   try {
     const data = await CartApiPostReq(cartdata);
@@ -54,11 +58,10 @@ export const PostCartProduct = (cartdata) => async (dispatch) => {
     dispatch(CartError());
   }
 };
-export const patchCartProduct = (id,cartdata) => async (dispatch) => {
- 
+export const patchCartProduct = (id, cartdata) => async (dispatch) => {
   dispatch(CarthRequest());
   try {
-    const data = await CartApiPatchReq(id,cartdata);
+    const data = await CartApiPatchReq(id, cartdata);
     dispatch(patchCartSuccess(data));
   } catch (er) {
     dispatch(CartError());
@@ -76,7 +79,7 @@ export const getCartProduct = () => async (dispatch) => {
 export const deleteCartProduct = (id) => async (dispatch) => {
   dispatch(CarthRequest());
   try {
-     await CartApiDeleteReq(id);
+    await CartApiDeleteReq(id);
     dispatch(deleteCartSuccess(id));
   } catch (er) {
     dispatch(CartError());
