@@ -30,8 +30,8 @@ import { LoginContext } from "../Context/LoginContext";
 import { CartContext } from "../Context/CartContext";
 const Navbar = () => {
   const navigate = useNavigate();
-  const { user, logOut,  } = useUserAuth();
-  const {cartCount,cardProucts}=useContext(CartContext)
+  const { user, logOut } = useUserAuth();
+  const { cartCount, cardProucts } = useContext(CartContext);
   const { isOpen, onOpen, onClose } = useContext(LoginContext);
   const handleLogOut = async () => {
     try {
@@ -45,9 +45,9 @@ const Navbar = () => {
   const handleClick = () => {
     navigate("/");
   };
-  useEffect(()=>{
-    cardProucts()
-  },[])
+  useEffect(() => {
+    cardProucts();
+  }, []);
   return (
     <Flex
       h="55px"
@@ -90,21 +90,23 @@ const Navbar = () => {
       >
         <SearchBox />
       </Box>
-      {user?<Logout/>:
-      <Button
-        onClick={onOpen}
-        w="11%"
-        colorscheme="white"
-        fontWeight={"500"}
-        color="#2974f2"
-        bg="white"
-        mr={10}
-        h="72%"
-        borderRadius={1}
-      >
-        Login
-      </Button>
-      }
+      {user ? (
+        <Logout />
+      ) : (
+        <Button
+          onClick={onOpen}
+          w="11%"
+          colorscheme="white"
+          fontWeight={"500"}
+          color="#2974f2"
+          bg="white"
+          mr={10}
+          h="72%"
+          borderRadius={1}
+        >
+          Login
+        </Button>
+      )}
       <Text fontWeight="600" fontSize="medium" cursor={"pointer"}>
         Become a Seller
       </Text>
@@ -120,19 +122,35 @@ const Navbar = () => {
 
       <Box ml="15px" cursor={"pointer"}>
         <Flex mr={4} justifyContent={"center"} alignItems={"center"}>
-       
-
           <Link to={"/cart"}>
             <Flex
               fontWeight="600"
               fontSize={{ base: "sm", md: "md" }}
               mt={1}
               mr={2}
-              position={'relative'}
+              position={"relative"}
               alignItems="center"
               justifyContent="center"
             >
-              {user && user?.email.substring(0, user.email.indexOf("@"))!=='admin' ? (cartCount === 0 ?  null:<Circle position={'absolute'} left={1} top={-1} size='40px'w={"14px"} h={"14px"} bg='tomato' color='white'><Text as={"span"} fontSize={"10px"} color={"white"}>{cartCount}</Text></Circle> ) : null}
+              {user &&
+              user?.email.substring(0, user.email.indexOf("@")) !== "admin" ? (
+                cartCount === 0 ? null : (
+                  <Circle
+                    position={"absolute"}
+                    left={1}
+                    top={-1}
+                    size="40px"
+                    w={"14px"}
+                    h={"14px"}
+                    bg="tomato"
+                    color="white"
+                  >
+                    <Text as={"span"} fontSize={"10px"} color={"white"}>
+                      {cartCount}
+                    </Text>
+                  </Circle>
+                )
+              ) : null}
               <Icon as={FaShoppingCart} w={4} h={4} mr={1} pt={1} />
               <Text as={"span"} pt={0}>
                 Cart
@@ -146,7 +164,6 @@ const Navbar = () => {
           {user&&user.email.substring(0, user.email.indexOf("@"))}
         </Text>  */}
 
-  
       {/* {login && user && (
         <Menu>
           <MenuButton

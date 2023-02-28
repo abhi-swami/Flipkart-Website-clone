@@ -28,7 +28,6 @@ import { convertor } from "../../Utils/function";
 import { Link } from "react-router-dom";
 import EditProduct from "./EditProduct";
 
-
 const ProductItem = ({
   name,
   brand,
@@ -40,17 +39,14 @@ const ProductItem = ({
   query_url,
   id,
   getData,
-  url,}) => {
-
-
+  url,
+}) => {
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const editProduct=(id)=>{
-    console.log(id)
-    onOpen()
-  }
-
-
+  const editProduct = (id) => {
+    console.log(id);
+    onOpen();
+  };
 
   const deleteProduct = async () => {
     return axios.delete(`${url}/${id}`);
@@ -78,10 +74,9 @@ const ProductItem = ({
       )
       .then(() => getData());
   };
-  
 
   return (
-    <Box border={'0px solid red'} width={'100%'}>
+    <Box border={"0px solid red"} width={"100%"}>
       <Flex
         w="100%"
         justify="space-between"
@@ -91,11 +86,7 @@ const ProductItem = ({
         borderBottom="1px solid gainsboro"
         alignItems={"center"}
       >
-        <Image
-          display="block"
-          src={thumbnail}
-          w="100px"
-        />
+        <Image display="block" src={thumbnail} w="100px" />
         <Box w="50%" textAlign={"start"}>
           <Box fontSize={"16px"}>
             <Flex>
@@ -103,9 +94,9 @@ const ProductItem = ({
                 Ratings :
               </Text>
               {convertor(rating)}
-         
-              <Box mt={1.5} ml={2} >
-                <AiFillStar color="rgb(56,142,60)"/>
+
+              <Box mt={1.5} ml={2}>
+                <AiFillStar color="rgb(56,142,60)" />
               </Box>
             </Flex>
           </Box>
@@ -165,29 +156,31 @@ const ProductItem = ({
               alignItems="center"
               w="30px"
               p={["1", "1", "2"]}
-              onClick={()=>editProduct(id)}
+              onClick={() => editProduct(id)}
             >
               <AiFillEdit />
             </Circle>
           </Tooltip>
-            <Modal isOpen={isOpen} onClose={onClose} >
-                <ModalOverlay />
-                <ModalContent w={'70%'}>
-                  <ModalHeader>
-                    <Heading size={"sm"}>Enter The Details Here</Heading>
-                  </ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody>
-                    <HStack my={1}></HStack>
-                    <HStack justifyContent={"center"} alignItems={"center"}>
-                      <EditProduct id={id}/>
-                    </HStack>
-                  </ModalBody>
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent w={"70%"}>
+              <ModalHeader>
+                <Heading size={"sm"}>Enter The Details Here</Heading>
+              </ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <HStack my={1}></HStack>
+                <HStack justifyContent={"center"} alignItems={"center"}>
+                  <EditProduct id={id} />
+                </HStack>
+              </ModalBody>
 
-                  <ModalFooter justifyContent={"center"} alignItems={"center"}>
-                  </ModalFooter>
-                </ModalContent>
-              </Modal>
+              <ModalFooter
+                justifyContent={"center"}
+                alignItems={"center"}
+              ></ModalFooter>
+            </ModalContent>
+          </Modal>
         </Box>
       </Flex>
     </Box>

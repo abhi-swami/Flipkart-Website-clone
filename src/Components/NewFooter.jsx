@@ -27,7 +27,7 @@ const NewFooter = () => {
       width="100%"
       margin={"auto"}
     >
-      <Box width={"95%"} margin={'auto'}>
+      <Box width={"95%"} margin={"auto"}>
         <Text marginTop={"5px"}>
           <span
             style={{
@@ -554,7 +554,6 @@ const NewFooter = () => {
       <Box
         bg={"#172337"}
         width={""}
-
         color={"white"}
         fontSize={"12px"}
         mt={"50px"}
@@ -654,7 +653,6 @@ const NewFooter = () => {
           ></Flex>
           <Container
             as={Stack}
-  
             maxW={"7xl"}
             py={4}
             direction={{ base: "column", md: "row" }}

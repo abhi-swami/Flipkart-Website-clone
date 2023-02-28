@@ -15,14 +15,14 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { useUserAuth,user } from "../../Context/UserAuthContext";
+import { useUserAuth, user } from "../../Context/UserAuthContext";
 const SignUp = () => {
   const toast = useToast();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [title,setTitle]=useState('')
+  const [title, setTitle] = useState("");
   const { signUp } = useUserAuth();
   const handleSubmit = async () => {
     setError("");

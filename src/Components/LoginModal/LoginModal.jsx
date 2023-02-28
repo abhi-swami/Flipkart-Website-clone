@@ -24,56 +24,53 @@ import { useUserAuth } from "../../Context/UserAuthContext";
 import MySingUp from "./MySignUp";
 // import {RouteLink} from 'react-router-dom'
 const LoginModal = ({ isOpen, onOpen, onClose }) => {
-
   const toast = useToast();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const { user,login } = useUserAuth();
-  const [title,setTitle]=useState('')
+  const { user, login } = useUserAuth();
+  const [title, setTitle] = useState("");
   const [password, setPassword] = useState("");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   //  const navigate=useNavigate()
   // const title={user?.email.substring(0, user.email.indexOf("@"))}
-  // const title=user?.email.substring(0, user.email.indexOf("@")) 
-  const handlePassword=(e)=>{
-    setError("")
-    setPassword(e.target.value)
-  }
+  // const title=user?.email.substring(0, user.email.indexOf("@"))
+  const handlePassword = (e) => {
+    setError("");
+    setPassword(e.target.value);
+  };
   const handleSubmit = async () => {
     setError("");
     try {
-      await login(email, password).then((res)=>{
-      
-
-        if(res._tokenResponse.email==="admin@clickcart.in"){
-          navigate('/admin')
-        }  
+      await login(email, password).then((res) => {
+        if (res._tokenResponse.email === "admin@clickcart.in") {
+          navigate("/admin");
+        }
       });
-    
+
       toast({
-        title:`Welcome `,
+        title: `Welcome `,
         description: " login successfull",
         status: "success",
         duration: 2000,
         isClosable: true,
       });
-      setPassword("")
-      setEmail("")
+      setPassword("");
+      setEmail("");
       onClose();
     } catch (err) {
-      setEmail("")
-      setPassword("")
+      setEmail("");
+      setPassword("");
       setError(err.message);
     }
   };
-  useEffect(()=>{
-    if(user){
-      setTitle(user?.email.substring(0, user.email.indexOf("@")) )
+  useEffect(() => {
+    if (user) {
+      setTitle(user?.email.substring(0, user.email.indexOf("@")));
     }
-  },[user])
+  }, [user]);
   return (
     <>
-      {error.length>0 &&
+      {error.length > 0 &&
         toast({
           title: "Error",
           description: error,
@@ -144,7 +141,7 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
                     </Text>
                   </Box>
                 </FormControl>
-                <HStack spacing={6} justifyContent={'center'}>
+                <HStack spacing={6} justifyContent={"center"}>
                   <Box>
                     <Button
                       onClick={handleSubmit}
@@ -156,16 +153,16 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
                       Login
                     </Button>
                   </Box>
-             
-                <Center>
-                  <Button w={"full"} maxW={"md"}>
-                    <Center>
-                      <Text pr={3}>Sign in with </Text>
 
-                      <Icon as={FcGoogle} fontSize={"lg"} />
-                    </Center>
-                  </Button>
-                </Center>
+                  <Center>
+                    <Button w={"full"} maxW={"md"}>
+                      <Center>
+                        <Text pr={3}>Sign in with </Text>
+
+                        <Icon as={FcGoogle} fontSize={"lg"} />
+                      </Center>
+                    </Button>
+                  </Center>
                 </HStack>
 
                 <Box
@@ -175,9 +172,9 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
                   gap={1}
                   justifyContent="center"
                   onClick={onOpen}
-                  border={'0px solid black'}
+                  border={"0px solid black"}
                 >
-                  <MySingUp/>
+                  <MySingUp />
                   {/* <Text color={"black"}>New to Click-Cart ?</Text>
                   <Link to="/signup">
                     <Text >Create an account</Text>
@@ -188,7 +185,6 @@ const LoginModal = ({ isOpen, onOpen, onClose }) => {
           </Box>
         </ModalContent>
       </Modal>
-     
     </>
   );
 };

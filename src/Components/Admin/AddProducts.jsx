@@ -11,7 +11,6 @@ import {
 import React, { useRef, useState } from "react";
 import { CheckCircleIcon, WarningIcon } from "@chakra-ui/icons";
 
-
 const intitialData = {
   name: "",
   brand: "",
@@ -132,7 +131,7 @@ const AddProducts = () => {
           />
           <FormLabel mt={4}>Brand Name</FormLabel>
           <Input
-          id="2"
+            id="2"
             type="text"
             placeholder="Enter Brand Name"
             value={brand}
@@ -153,7 +152,7 @@ const AddProducts = () => {
 
           <FormLabel mt={4}>Product Price (Rs.)</FormLabel>
           <Input
-          id="4"
+            id="4"
             type="number"
             placeholder="Enter Product Price"
             value={current_price}
@@ -163,7 +162,7 @@ const AddProducts = () => {
 
           <FormLabel mt={4}>Product MRP</FormLabel>
           <Input
-          id="5"
+            id="5"
             type="number"
             placeholder="Enter Product MRP"
             name="original_price"
@@ -173,7 +172,7 @@ const AddProducts = () => {
 
           <FormLabel mt={4}>Ratings</FormLabel>
           <Input
-          id="6"
+            id="6"
             type="number"
             placeholder="Enter User Ratings"
             value={rating}
@@ -182,7 +181,7 @@ const AddProducts = () => {
           />
           <FormLabel mt={4}>User Ratings</FormLabel>
           <Input
-          id="1"
+            id="1"
             type="number"
             placeholder="Enter User Ratings"
             value={rating_count}

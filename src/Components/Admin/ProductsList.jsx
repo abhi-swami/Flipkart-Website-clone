@@ -25,7 +25,6 @@ import { productListGenerator, starGenderator } from "../../Utils/function";
 import { base_url } from "../../Utils/url";
 import ProductItem from "./ProductItem";
 
-
 /*
 http://localhost:8080/mobiles
 http://localhost:8080/tablets
@@ -43,11 +42,10 @@ const categories = [
   { id: 6, category: "Refrigerators" },
 ];
 const starRating = [
-  { id: 1,star:2 },
-  { id: 2,star:3 },
-  { id: 3,star:4 },
-  { id: 4,star:5,}
-
+  { id: 1, star: 2 },
+  { id: 2, star: 3 },
+  { id: 3, star: 4 },
+  { id: 4, star: 5 },
 ];
 
 const url = `${base_url}/allproducts?q=laptop`;
@@ -63,7 +61,7 @@ const ProductsList = () => {
         setProductList(productListGenerator(res.data));
       })
       .catch((err) => console.log(err));
-  }
+  };
   useEffect(() => {
     getData();
   }, []);
@@ -125,7 +123,11 @@ const ProductsList = () => {
                 <AccordionPanel pb={4} overflowY={"scroll"} h={"200px"}>
                   <VStack>
                     {productList.map((el) => (
-                      <Checkbox key={el+Math.random()+Date.now()} fontSize={"sm"} w={"100%"}>
+                      <Checkbox
+                        key={el + Math.random() + Date.now()}
+                        fontSize={"sm"}
+                        w={"100%"}
+                      >
                         {el}
                       </Checkbox>
                     ))}
@@ -145,12 +147,11 @@ const ProductsList = () => {
                 </h2>
                 <AccordionPanel pb={4}>
                   <VStack>
-                  {starRating.map((el) => (
-                    
-                    <Checkbox key={el.id} fontSize={"sm"} w={"100%"} >
-                        <Box display="flex" flexDirection={'row'}>
-                        {starGenderator(el.star)}
-                    </Box>
+                    {starRating.map((el) => (
+                      <Checkbox key={el.id} fontSize={"sm"} w={"100%"}>
+                        <Box display="flex" flexDirection={"row"}>
+                          {starGenderator(el.star)}
+                        </Box>
                       </Checkbox>
                     ))}
                   </VStack>
@@ -161,8 +162,7 @@ const ProductsList = () => {
         </GridItem>
 
         <GridItem p={{ base: 1, sm: 1, md: 1 }}>
-          <Flex justifyContent={"flex-end"} mb={59}>
-          </Flex>
+          <Flex justifyContent={"flex-end"} mb={59}></Flex>
           <SimpleGrid columns={1} spacing="50px" border={"0px solid black"}>
             <Box mt={1}>
               {data.map((el) => {

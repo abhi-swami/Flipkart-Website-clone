@@ -17,7 +17,9 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const HoverSelect = ({ options }) => {
   const [selectedOption, setSelectedOption] = useState("");
+
   const [isOpen, setIsOpen] = useState(false);
+
   const [toggleIcon, setToggleIcon] = useState();
 
   const handleSelectChange = (event) => {

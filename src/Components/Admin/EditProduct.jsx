@@ -14,7 +14,6 @@ import { CheckCircleIcon, WarningIcon } from "@chakra-ui/icons";
 import { getProduct, patchProduct } from "../../Utils/apiFunction";
 import { base_url } from "../../Utils/url";
 
-
 const intitialData = {
   name: "",
   brand: "",
@@ -26,7 +25,7 @@ const intitialData = {
   query_url: "",
 };
 
-const EditProduct = ({id}) => {
+const EditProduct = ({ id }) => {
   const url = `${base_url}/allproducts/${id}`;
   const [data, setData] = useState(intitialData);
   const [loading] = useState(false);
@@ -95,12 +94,11 @@ const EditProduct = ({id}) => {
             </Flex>
           ),
         })
-      ).then(setData(intitialData))
-
+      )
+      .then(setData(intitialData));
   };
   useEffect(() => {
-    if(id){
-
+    if (id) {
       getProduct(url).then((res) => setData(res));
     }
   }, []);
@@ -149,7 +147,7 @@ const EditProduct = ({id}) => {
 
           <FormLabel mt={4}>Original Price</FormLabel>
           <Input
-          id="14"
+            id="14"
             type="number"
             placeholder="Enter Product MRP"
             name="original_price"
@@ -168,7 +166,7 @@ const EditProduct = ({id}) => {
           />
           <FormLabel mt={4}>Rating Counts</FormLabel>
           <Input
-          id="16"
+            id="16"
             type="number"
             placeholder="Enter User Ratings"
             value={rating_count}

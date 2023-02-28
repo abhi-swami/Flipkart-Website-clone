@@ -6,26 +6,22 @@ import {
   Text,
   HStack,
   useToast,
-
-
 } from "@chakra-ui/react";
-import { useEffect,useContext } from "react";
+import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsSuitHeartFill } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import { convertor } from "../Utils/function";
 import { LoginContext } from "../Context/LoginContext";
 import { useUserAuth } from "../Context/UserAuthContext";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { postFavouriteProduct } from "../Redux/Favorite/favourite.action";
 import { base_url } from "../Utils/url";
 
-
-
-export default function CardComponent({cardData}) {
+export default function CardComponent({ cardData }) {
   const navigate = useNavigate();
   const { onOpen } = useContext(LoginContext);
-  const { user, } = useUserAuth();
+  const { user } = useUserAuth();
   const {
     name,
     brand,
@@ -36,20 +32,18 @@ export default function CardComponent({cardData}) {
     thumbnail,
     query_url,
     id,
-  }=cardData;
-  const toast=useToast()
-  const dispatch=useDispatch();
-  const favouriteProduct=useSelector((store)=>store.favouriteReducer.data)
-
-
+  } = cardData;
+  const toast = useToast();
+  const dispatch = useDispatch();
+  const favouriteProduct = useSelector((store) => store.favouriteReducer.data);
 
   const handleheart = () => {
-    if(!user){
-      onOpen()
+    if (!user) {
+      onOpen();
     }
-    if(user){
-      const url=`${base_url}/favourite`
-      dispatch(postFavouriteProduct(cardData,url)).then(()=>{
+    if (user) {
+      const url = `${base_url}/favourite`;
+      dispatch(postFavouriteProduct(cardData, url)).then(() => {
         toast({
           position: `top`,
           title: "Product Add To Wish List",
@@ -57,12 +51,12 @@ export default function CardComponent({cardData}) {
           duration: 5000,
           isClosable: true,
         });
-      })
+      });
     }
   };
-  const handleClick=()=>{
-    navigate(`/product/${id}`)
-  }
+  const handleClick = () => {
+    navigate(`/product/${id}`);
+  };
 
   let x = Math.ceil(((original_price - current_price) / original_price) * 100);
   return (
@@ -77,7 +71,6 @@ export default function CardComponent({cardData}) {
         shadow="lg"
         position="relative"
         pt={3}
-        
       >
         {rating > 4.5 ? (
           <Text
@@ -100,11 +93,10 @@ export default function CardComponent({cardData}) {
           p={"3px"}
           bg={"white"}
           color={"rgb(200,200,200)"}
-          _hover={{ color: "rgb(40,116,240)",cursor:'pointer' }}
+          _hover={{ color: "rgb(40,116,240)", cursor: "pointer" }}
           fontSize={"15px"}
           borderRadius={"sm"}
           onClick={handleheart}
-
         >
           <BsSuitHeartFill />
         </Text>
@@ -116,7 +108,7 @@ export default function CardComponent({cardData}) {
           margin={"auto"}
         />
 
-        <Box p={2 } onClick={handleClick}>
+        <Box p={2} onClick={handleClick}>
           <Flex justifyContent={"space-between"}>
             <Text
               fontFamily={"montserrat,sans-serif"}
@@ -143,22 +135,26 @@ export default function CardComponent({cardData}) {
               {name}
             </Box>
           </Flex>
-          <HStack
-            p={"1px"}
-            pr={1}
-            color={"black"}
-          >
-            <Flex bgColor={'rgb(56,142,60)'} px={1} color={'white'} gap={2} borderRadius={2} >
+          <HStack p={"1px"} pr={1} color={"black"}>
+            <Flex
+              bgColor={"rgb(56,142,60)"}
+              px={1}
+              color={"white"}
+              gap={2}
+              borderRadius={2}
+            >
               <Text fontSize={"14px"}>{rating}</Text>
               <Text fontSize={"14px"} mt={"4px"}>
                 <AiOutlineStar />
               </Text>
             </Flex>
-            <Text fontSize={'12px'} fontWeight={'medium'} color={'rgb(139,135,135)'} >
+            <Text
+              fontSize={"12px"}
+              fontWeight={"medium"}
+              color={"rgb(139,135,135)"}
+            >
               ({convertor(rating_count)})
             </Text>
-
-    
           </HStack>
 
           <HStack
@@ -168,22 +164,34 @@ export default function CardComponent({cardData}) {
             fontSize="16px"
             fontWeight={"medium"}
           >
-            <Text fontWeight={'bold'} color={'black'}>₹ {convertor(current_price)}</Text>
-            <Text textDecor={"line-through"} pt={1} fontSize={"12px"} >
+            <Text fontWeight={"bold"} color={"black"}>
+              ₹ {convertor(current_price)}
+            </Text>
+            <Text textDecor={"line-through"} pt={1} fontSize={"12px"}>
               ₹ {convertor(original_price)}
             </Text>
-            <Text color={'rgb(56,142,60)'} pt={1} fontSize={"14px"}>
+            <Text color={"rgb(56,142,60)"} pt={1} fontSize={"14px"}>
               {x}% off
             </Text>
           </HStack>
-            <Text  pt={1} fontSize={"11px"} textAlign={'left'} fontWeight={'medium'} >
-              Free delivery
-            </Text>
-          
-            <Text  pt={1} fontSize={"14px"} textAlign={'left'} fontWeight={'bold'} color={'rgb(56,142,60)'} >
+          <Text
+            pt={1}
+            fontSize={"11px"}
+            textAlign={"left"}
+            fontWeight={"medium"}
+          >
+            Free delivery
+          </Text>
+
+          <Text
+            pt={1}
+            fontSize={"14px"}
+            textAlign={"left"}
+            fontWeight={"bold"}
+            color={"rgb(56,142,60)"}
+          >
             Bank Offer
-            </Text>
-          
+          </Text>
         </Box>
       </Box>
     </Box>

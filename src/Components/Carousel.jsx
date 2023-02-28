@@ -2,18 +2,18 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Image } from '@chakra-ui/react';
+import { Image } from "@chakra-ui/react";
 const Carousel = () => {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 100,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay:true,
-    };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
   return (
-    <div style={{marginTop:"-50px"}}>
+    <div style={{ marginTop: "-50px" }}>
       <Slider {...settings}>
         <div>
           <Image
@@ -39,6 +39,6 @@ const Carousel = () => {
       </Slider>
     </div>
   );
-}
+};
 
-export default Carousel
+export default Carousel;

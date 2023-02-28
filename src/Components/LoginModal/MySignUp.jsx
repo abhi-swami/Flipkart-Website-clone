@@ -1,4 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import {
   Button,
   FormControl,
@@ -8,20 +9,19 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   Text,
   useDisclosure,
   Box,
-  Heading,
   Image,
   Stack,
-  InputGroup,
   Center,
   useToast,
 } from "@chakra-ui/react";
+
 import React, { useEffect, useState } from "react";
+
 import { useUserAuth } from "../../Context/UserAuthContext";
 
 export default function MySingUp() {
